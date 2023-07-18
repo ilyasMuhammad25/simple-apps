@@ -1,0 +1,8 @@
+.env
+Dockerfile
+testing/
+database/
+node_modules/
+coverage/
+package-lock.json
+sonar-project.properties
