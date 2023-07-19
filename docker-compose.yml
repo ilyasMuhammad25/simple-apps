@@ -1,7 +1,8 @@
 version: "3.9"
 services:
   backend:
-    build: 
+    build: . 
+    image: ilyasmuhamamd25/app-ilyas:v2
     restart: always
     ports:
       - "3000"
