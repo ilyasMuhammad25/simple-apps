@@ -4,9 +4,22 @@ services:
     build: . 
     image: ilyasmuhammad25/app-ilyas:v2
     restart: always
+    env_file:
+      - .env
     ports:
       - "3000"
     volumes:
       - app-data:/app/public/images
+volumes:
+  app-data:
+
+web:
+  build: ./nginx
+  image: ilyasmuhammad25/webproxy  
+  restart: always
+  ports:
+  - "80:80"
+  depends_on:
+  - backend
 volumes:
   app-data:
