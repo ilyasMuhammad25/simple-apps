@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  backend:
+    build: 
+    restart: always
+    ports:
+      - "3000"
+    volumes:
+      - app-data:/app/public/images
+volumes:
+  app-data:
