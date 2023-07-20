@@ -16,7 +16,7 @@ pipeline{
             parallel{
               stage('Unit Test'){
                 steps {
-                 echo 'unit test'
+                sh 'npm test'
         }  
             }
     }
