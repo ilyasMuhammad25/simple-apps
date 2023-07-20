@@ -10,8 +10,7 @@ services:
       - "3000"
     volumes:
       - app-data:/app/public/images
-volumes:
-  app-data:
+
 
 web:
   build: ./nginx
@@ -21,4 +20,5 @@ web:
   - "80:80"
   depends_on:
   - backend
-
+volumes:
+  app-data:
