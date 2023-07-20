@@ -5,21 +5,22 @@ pipeline{
         }
     }
     stages{
-        stage('build app'){
+         stage('build app'){ 
             steps {
                 sh 'npm install'
         }
+          }
     }
-
-     stages{
+    stages{
         stage('Run Test'){
             parallel{
-              stage('Unit Test'){
-                steps {
-                sh 'npm test'
+              stage('unit test'){
+                steps{
+                    sh 'npm test'
+                }
+              }
         }  
             }
-    }}
-}
-     }   
+
+    }
     }
