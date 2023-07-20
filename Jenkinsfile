@@ -15,7 +15,7 @@ pipeline{
             parallel{
               stage('unit test'){
                 steps{
-                  sh 'npm test'
+                  sh 'sudo npm test'
                 }
               }
             }  
