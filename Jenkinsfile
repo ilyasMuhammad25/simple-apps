@@ -15,11 +15,22 @@ pipeline{
             parallel{
               stage('unit test'){
                 steps{
-                    sh 'npm test'
+                  sh 'npm test'
                 }
               }
             }  
+       }
 
+       stage('Build Image'){
+        steps{
+           sh 'docker compose build'
+        }
+       }
+
+       stage{
+        steps{
+            sh 'docker compose push'
+        }
        }
     }
         
