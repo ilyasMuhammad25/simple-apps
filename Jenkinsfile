@@ -10,4 +10,11 @@ pipeline{
                 sh 'npm install'
         }
     }
+
+     stages{
+        stage('Run Test'){
+            steps {
+                sh 'npm install'
+        }
+    }
 }
