@@ -10,9 +10,8 @@ pipeline{
                 sh 'npm install'
         }
           }
-    }
-    stages{
-        stage('Run Test'){
+
+          stage('Run Test'){
             parallel{
               stage('unit test'){
                 steps{
@@ -20,7 +19,8 @@ pipeline{
                 }
               }
             }  
-            }
 
+       }
     }
+        
 }
