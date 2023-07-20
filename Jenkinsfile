@@ -11,7 +11,15 @@ pipeline{
         }
           }
 
-         
+          stage('Run Test'){
+            parallel{
+              stage('unit test'){
+                steps{
+                  sh 'npm test'
+                }
+              }
+            }  
+       }
 
        stage('Build Image'){
         steps{
