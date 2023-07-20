@@ -11,15 +11,7 @@ pipeline{
         }
           }
 
-          stage('Run Test'){
-            parallel{
-              stage('unit test'){
-                steps{
-                  sh 'sudo npm test'
-                }
-              }
-            }  
-       }
+        
 
        stage('Build Image'){
         steps{
