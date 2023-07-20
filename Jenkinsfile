@@ -13,8 +13,11 @@ pipeline{
 
      stages{
         stage('Run Test'){
-            steps {
-                sh 'npm install'
-        }
+            parallel{
+              stage('Unit Test'){
+                steps {
+                 echo 'unit test'
+        }  
+            }
     }
 }
